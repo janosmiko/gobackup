@@ -7,9 +7,9 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/gobackup/gobackup/config"
-	"github.com/gobackup/gobackup/helper"
-	"github.com/gobackup/gobackup/logger"
+	"github.com/janosmiko/gobackup/config"
+	"github.com/janosmiko/gobackup/helper"
+	"github.com/janosmiko/gobackup/logger"
 	"github.com/spf13/viper"
 )
 

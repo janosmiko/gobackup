@@ -60,7 +60,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
               </div>
               <div className="links">
                 <a
-                  href="https://github.com/gobackup/gobackup"
+                  href="https://github.com/janosmiko/gobackup"
                   title="GitHub"
                   target="_blank"
                 >

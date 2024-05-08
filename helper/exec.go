@@ -9,7 +9,7 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/gobackup/gobackup/logger"
+	"github.com/janosmiko/gobackup/logger"
 )
 
 var (

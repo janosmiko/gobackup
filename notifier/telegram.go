@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/gobackup/gobackup/helper"
+	"github.com/janosmiko/gobackup/helper"
 )
 
 type telegramPayload struct {

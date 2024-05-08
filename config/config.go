@@ -12,8 +12,8 @@ import (
 	"github.com/joho/godotenv"
 	"github.com/spf13/viper"
 
-	"github.com/gobackup/gobackup/helper"
-	"github.com/gobackup/gobackup/logger"
+	"github.com/janosmiko/gobackup/helper"
+	"github.com/janosmiko/gobackup/logger"
 )
 
 var (
@@ -109,8 +109,8 @@ type SubConfig struct {
 // Init
 // loadConfig from:
 // - ./gobackup.yml
-// - ~/.gobackup/gobackup.yml
-// - /etc/gobackup/gobackup.yml
+// - ~/.janosmiko/gobackup.yml
+// - /etc/janosmiko/gobackup.yml
 func Init(configFile string) error {
 	logger := logger.Tag("Config")
 
@@ -128,9 +128,9 @@ func Init(configFile string) error {
 
 		// ./gobackup.yml
 		viper.AddConfigPath(".")
-		// ~/.gobackup/gobackup.yml
+		// ~/.janosmiko/gobackup.yml
 		viper.AddConfigPath("$HOME/.gobackup") // call multiple times to add many search paths
-		// /etc/gobackup/gobackup.yml
+		// /etc/janosmiko/gobackup.yml
 		viper.AddConfigPath("/etc/gobackup/") // path to look for the config file in
 	}
 
