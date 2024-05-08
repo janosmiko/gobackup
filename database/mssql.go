@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/gobackup/gobackup/helper"
-	"github.com/gobackup/gobackup/logger"
+	"github.com/janosmiko/gobackup/helper"
+	"github.com/janosmiko/gobackup/logger"
 )
 
 // MSSQL database

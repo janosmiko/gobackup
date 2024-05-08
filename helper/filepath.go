@@ -5,7 +5,7 @@ import (
 	"path"
 	"path/filepath"
 
-	"github.com/gobackup/gobackup/logger"
+	"github.com/janosmiko/gobackup/logger"
 )
 
 // IsExistsPath check path exist

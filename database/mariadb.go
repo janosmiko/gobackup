@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/gobackup/gobackup/helper"
-	"github.com/gobackup/gobackup/logger"
+	"github.com/janosmiko/gobackup/helper"
+	"github.com/janosmiko/gobackup/logger"
 )
 
 // Mariadb database
@@ -21,13 +21,13 @@ import (
 
 type MariaDB struct {
 	Base
-	host          		string
-	port          		string
-	socket        		string
-	database     		string
-	username      		string
-	password      		string
-	args          		string
+	host     string
+	port     string
+	socket   string
+	database string
+	username string
+	password string
+	args     string
 }
 
 func (db *MariaDB) init() (err error) {

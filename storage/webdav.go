@@ -8,8 +8,8 @@ import (
 
 	"github.com/studio-b12/gowebdav"
 
-	"github.com/gobackup/gobackup/helper"
-	"github.com/gobackup/gobackup/logger"
+	"github.com/janosmiko/gobackup/helper"
+	"github.com/janosmiko/gobackup/logger"
 )
 
 // WebDAV storage

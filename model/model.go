@@ -6,16 +6,16 @@ import (
 
 	"github.com/spf13/viper"
 
-	"github.com/gobackup/gobackup/archive"
-	"github.com/gobackup/gobackup/compressor"
-	"github.com/gobackup/gobackup/config"
-	"github.com/gobackup/gobackup/database"
-	"github.com/gobackup/gobackup/encryptor"
-	"github.com/gobackup/gobackup/helper"
-	"github.com/gobackup/gobackup/logger"
-	"github.com/gobackup/gobackup/notifier"
-	"github.com/gobackup/gobackup/splitter"
-	"github.com/gobackup/gobackup/storage"
+	"github.com/janosmiko/gobackup/archive"
+	"github.com/janosmiko/gobackup/compressor"
+	"github.com/janosmiko/gobackup/config"
+	"github.com/janosmiko/gobackup/database"
+	"github.com/janosmiko/gobackup/encryptor"
+	"github.com/janosmiko/gobackup/helper"
+	"github.com/janosmiko/gobackup/logger"
+	"github.com/janosmiko/gobackup/notifier"
+	"github.com/janosmiko/gobackup/splitter"
+	"github.com/janosmiko/gobackup/storage"
 )
 
 // Model class

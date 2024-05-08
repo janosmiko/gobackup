@@ -9,21 +9,21 @@ import (
 )
 
 func Test_parseGitHubIssue(t *testing.T) {
-	issue, err := parseGitHubIssue("https://github.com/huacnlee/gobackup/pull/111")
+	issue, err := parseGitHubIssue("https://github.com/janosmiko/gobackup/pull/111")
 	assert.NoError(t, err)
 	assert.Equal(t, "huacnlee", issue.group)
 	assert.Equal(t, "gobackup", issue.repo)
 	assert.Equal(t, "111", issue.issueId)
-	assert.Equal(t, "https://api.github.com/repos/huacnlee/gobackup/issues/111/comments", issue.commentURL())
+	assert.Equal(t, "https://api.github.com/repos/janosmiko/gobackup/issues/111/comments", issue.commentURL())
 
-	issue, err = parseGitHubIssue("https://github.com/huacnlee/gobackup/issues/111")
+	issue, err = parseGitHubIssue("https://github.com/janosmiko/gobackup/issues/111")
 	assert.NoError(t, err)
 	assert.Equal(t, "huacnlee", issue.group)
 	assert.Equal(t, "gobackup", issue.repo)
 	assert.Equal(t, "111", issue.issueId)
-	assert.Equal(t, "https://api.github.com/repos/huacnlee/gobackup/issues/111/comments", issue.commentURL())
+	assert.Equal(t, "https://api.github.com/repos/janosmiko/gobackup/issues/111/comments", issue.commentURL())
 
-	issue, err = parseGitHubIssue("http://github.com/huacnlee/gobackup/issues/111/foo/bar?foo=1")
+	issue, err = parseGitHubIssue("http://github.com/janosmiko/gobackup/issues/111/foo/bar?foo=1")
 	assert.NoError(t, err)
 	assert.Equal(t, "huacnlee", issue.group)
 	assert.Equal(t, "gobackup", issue.repo)
@@ -40,7 +40,7 @@ func Test_NewGitHub(t *testing.T) {
 
 	s := NewGitHub(base)
 	s.viper.Set("token", "this-is-github-access-token")
-	s.viper.Set("url", "https://github.com/huacnlee/gobackup/issues/111")
+	s.viper.Set("url", "https://github.com/janosmiko/gobackup/issues/111")
 
 	assert.Equal(t, "GitHub Comment", s.Service)
 	assert.Equal(t, "POST", s.method)
@@ -54,9 +54,9 @@ func Test_NewGitHub(t *testing.T) {
 	assert.EqualError(t, err, "invalid GitHub issue URL: https://github.com/huacnlee")
 	assert.Equal(t, "https://github.com/huacnlee", url)
 
-	url, err = s.buildWebhookURL("https://github.com/huacnlee/gobackup/issues/111")
+	url, err = s.buildWebhookURL("https://github.com/janosmiko/gobackup/issues/111")
 	assert.NoError(t, err)
-	assert.Equal(t, "https://api.github.com/repos/huacnlee/gobackup/issues/111/comments", url)
+	assert.Equal(t, "https://api.github.com/repos/janosmiko/gobackup/issues/111/comments", url)
 
 	headers := s.buildHeaders()
 	assert.Equal(t, "Bearer this-is-github-access-token", headers["Authorization"])
